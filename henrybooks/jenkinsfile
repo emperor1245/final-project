@@ -18,14 +18,7 @@ pipeline {
                 sh 'docker-compose up -d --build'
             }
         }
-
-        // Optional: Run Django/Flask/Node tests inside the container
-        // stage('Run Tests') {
-        //     steps {
-        //         sh 'docker-compose exec web python manage.py test'
-        //     }
-        // }
-
+        
         stage('Teardown') {
             steps {
                 sh 'docker-compose down'
