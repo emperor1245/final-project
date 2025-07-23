@@ -1,0 +1,9 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+<h2>Branches</h2>
+<ul>
+    {% for branch in branches %}
+    <li>{{ branch.branch_name }} - {{ branch.city }}, {{ branch.state }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
